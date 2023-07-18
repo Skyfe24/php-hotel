@@ -20,15 +20,25 @@ include 'data/data.php';
     <body>
 
     
+    <table class="table table-dark table-striped-columns">
+  <thead>
+    <tr>
+      <th class="text-primary">Nome</th>
+      <th class="text-primary">Descrizione</th>
+      <th class="text-primary">Parcheggio</th>
+      <th class="text-primary">Voto</th>
+      <th class="text-primary">Distanza</th>
+    </tr>
+  </thead>
   <tbody>
   <?php foreach ($hotels as $hotel) : ?>
-  
-        <?= $hotel['name'] ?>
-        <?= $hotel['description'] ?>
-        <?= $hotel['parking'] ?>
-       <?= $hotel['vote'] ?><i class="ms-3 fa-solid fa-star"></i>
-        <?= $hotel['distance_to_center'] ?> km
-    
+    <tr>
+        <td><?= $hotel['name'] ?></td>
+        <td><?= $hotel['description'] ?></td>
+        <td><?= $hotel['parking'] ?></td>
+        <td><?= $hotel['vote'] ?><i class="ms-3 fa-solid fa-star text-warning"></i></td>
+        <td><?= $hotel['distance_to_center'] ?> km</td>
+    </tr>
     <?php endforeach ?>
 
 
