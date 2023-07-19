@@ -35,7 +35,7 @@ include 'data/data.php';
     <tr>
         <td><?= $hotel['name'] ?></td>
         <td><?= $hotel['description'] ?></td>
-        <td><?= $hotel['parking'] ?></td>
+        <td><?= $hotel['parking'] ? 'Yes' : 'No'?></td>
         <td><?= $hotel['vote'] ?><i class="ms-3 fa-solid fa-star text-warning"></i></td>
         <td><?= $hotel['distance_to_center'] ?> km</td>
     </tr>
